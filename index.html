@@ -1,0 +1,246 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Responsive employee registration form built with HTML, CSS, and JavaScript."
+    />
+    <title>Employee Registration | Assignment 4</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+    <script src="./script.js" defer></script>
+  </head>
+  <body>
+    <main class="page-shell">
+      <section class="registration-card" aria-labelledby="page-title">
+        <aside class="welcome-panel">
+          <a class="brand" href="#" aria-label="Northstar home">
+            <span class="brand-mark" aria-hidden="true">N</span>
+            <span>northstar<span class="brand-period">.</span></span>
+          </a>
+
+          <div class="welcome-copy">
+            <p class="eyebrow">PEOPLE & CULTURE</p>
+            <h1>Great teams start with <span>great people.</span></h1>
+            <p class="welcome-description">
+              Take the first step. Add your details to join our employee
+              directory.
+            </p>
+          </div>
+
+          <div class="welcome-footer">
+            <span class="status-dot" aria-hidden="true"></span>
+            <span>Growing together, every day</span>
+          </div>
+          <span class="decor decor-one" aria-hidden="true"></span>
+          <span class="decor decor-two" aria-hidden="true"></span>
+        </aside>
+
+        <div class="form-panel">
+          <div class="form-heading">
+            <div>
+              <p class="eyebrow">ASSIGNMENT 04</p>
+              <h2 id="page-title">Employee registration</h2>
+              <p class="form-intro">Enter your details to create your profile.</p>
+            </div>
+            <div class="step-indicator" aria-label="Step 1 of 1">
+              <span>01</span>
+              <span class="step-line"></span>
+              <span>01</span>
+            </div>
+          </div>
+
+          <div class="form-divider"></div>
+
+          <form id="employee-form" novalidate>
+            <div class="field">
+              <label for="employee-name">Full name <span>*</span></label>
+              <div class="input-wrap">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <circle cx="12" cy="8" r="3.5"></circle>
+                  <path d="M5 20c.5-3.5 2.8-5.5 7-5.5s6.5 2 7 5.5"></path>
+                </svg>
+                <input
+                  id="employee-name"
+                  name="name"
+                  type="text"
+                  placeholder="e.g. Alex Morgan"
+                  autocomplete="name"
+                  minlength="2"
+                  maxlength="80"
+                  required
+                  aria-describedby="name-error"
+                />
+              </div>
+              <p class="field-error" id="name-error" aria-live="polite"></p>
+            </div>
+
+            <div class="field">
+              <label for="employee-email">Work email <span>*</span></label>
+              <div class="input-wrap">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <rect x="3.5" y="5.5" width="17" height="13" rx="2"></rect>
+                  <path d="m4.5 7 7.5 5.5L19.5 7"></path>
+                </svg>
+                <input
+                  id="employee-email"
+                  name="email"
+                  type="email"
+                  placeholder="you@company.com"
+                  autocomplete="email"
+                  maxlength="254"
+                  required
+                  aria-describedby="email-error"
+                />
+              </div>
+              <p class="field-error" id="email-error" aria-live="polite"></p>
+            </div>
+
+            <div class="field">
+              <label for="employee-password">Create password <span>*</span></label>
+              <div class="input-wrap">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <rect x="4.5" y="10" width="15" height="10" rx="2"></rect>
+                  <path d="M8 10V7a4 4 0 0 1 8 0v3m-4 4v2"></path>
+                </svg>
+                <input
+                  id="employee-password"
+                  name="password"
+                  type="password"
+                  placeholder="At least 8 characters"
+                  autocomplete="new-password"
+                  minlength="8"
+                  maxlength="64"
+                  required
+                  aria-describedby="password-hint password-error"
+                />
+                <button
+                  class="password-toggle"
+                  type="button"
+                  aria-label="Show password"
+                  aria-pressed="false"
+                >
+                  <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M2.5 12s3.4-6 9.5-6 9.5 6 9.5 6-3.4 6-9.5 6-9.5-6-9.5-6Z"></path>
+                    <circle cx="12" cy="12" r="2.5"></circle>
+                  </svg>
+                </button>
+              </div>
+              <p class="field-hint" id="password-hint">Use at least 8 characters.</p>
+              <p class="field-error" id="password-error" aria-live="polite"></p>
+            </div>
+
+            <div class="form-row">
+              <div class="field">
+                <label for="employee-phone">Phone number <span>*</span></label>
+                <div class="input-wrap">
+                  <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <path
+                      d="M7.2 3.5h-2a1.7 1.7 0 0 0-1.7 1.8c.5 8.1 6.9 14.5 15 15a1.7 1.7 0 0 0 1.8-1.7v-2l-4.2-2-2.1 2.1a14 14 0 0 1-6.9-6.9l2.1-2.1-2-4.2Z"
+                    ></path>
+                  </svg>
+                  <input
+                    id="employee-phone"
+                    name="phone"
+                    type="tel"
+                    placeholder="+1 555 123 4567"
+                    autocomplete="tel"
+                    inputmode="tel"
+                    required
+                    aria-describedby="phone-hint phone-error"
+                  />
+                </div>
+                <p class="field-hint" id="phone-hint">Include your country code.</p>
+                <p class="field-error" id="phone-error" aria-live="polite"></p>
+              </div>
+
+              <div class="field">
+                <label for="employee-department">Department <span>*</span></label>
+                <div class="input-wrap select-wrap">
+                  <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <rect x="4" y="4" width="7" height="7" rx="1.5"></rect>
+                    <rect x="13" y="4" width="7" height="7" rx="1.5"></rect>
+                    <rect x="4" y="13" width="7" height="7" rx="1.5"></rect>
+                    <rect x="13" y="13" width="7" height="7" rx="1.5"></rect>
+                  </svg>
+                  <select
+                    id="employee-department"
+                    name="department"
+                    required
+                    aria-describedby="department-error"
+                  >
+                    <option value="" selected disabled>Select department</option>
+                    <option value="Engineering">Engineering</option>
+                    <option value="Design">Design</option>
+                    <option value="Human Resources">Human Resources</option>
+                    <option value="Finance">Finance</option>
+                    <option value="Marketing">Marketing</option>
+                    <option value="Sales">Sales</option>
+                    <option value="Operations">Operations</option>
+                    <option value="Other">Other</option>
+                  </select>
+                  <svg class="select-chevron" viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="m7 10 5 5 5-5"></path>
+                  </svg>
+                </div>
+                <p class="field-error" id="department-error" aria-live="polite"></p>
+              </div>
+            </div>
+
+            <label class="terms-check">
+              <input id="terms" name="terms" type="checkbox" required />
+              <span class="custom-checkbox" aria-hidden="true">
+                <svg viewBox="0 0 16 16"><path d="m3 8 3.2 3.2L13 4.5"></path></svg>
+              </span>
+              <span>I confirm these details are correct.</span>
+            </label>
+            <p class="field-error terms-error" id="terms-error" aria-live="polite"></p>
+
+            <button class="submit-button" type="submit">
+              <span>Register employee</span>
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M5 12h14m-6-6 6 6-6 6"></path>
+              </svg>
+            </button>
+
+            <p class="privacy-note">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M12 3 5 6v5c0 4.5 2.9 8 7 10 4.1-2 7-5.5 7-10V6l-7-3Z"></path>
+                <path d="m9 12 2 2 4-4"></path>
+              </svg>
+              Your information stays private and secure.
+            </p>
+          </form>
+
+          <section class="success-message" id="success-message" tabindex="-1" hidden>
+            <div class="success-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="m5 12 4.5 4.5L19 7"></path></svg>
+            </div>
+            <p class="eyebrow">ALL SET</p>
+            <h2>Welcome to the team, <span id="success-name"></span>!</h2>
+            <p class="success-copy">
+              Your employee profile has been registered for the
+              <strong id="success-department"></strong> department.
+            </p>
+            <button class="register-another" id="register-another" type="button">
+              Register another employee
+            </button>
+            <p class="demo-note">
+              This demo confirms registration in your browser; it does not send
+              or store your information on a server.
+            </p>
+          </section>
+
+          <p class="form-footnote">A simple form. A great place to start.</p>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
