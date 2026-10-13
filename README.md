@@ -11,5 +11,8 @@ required.
 
 ## GitHub Pages
 
+The site is published from the `main` branch using the GitHub Actions workflow
+in `.github/workflows/deploy-pages.yml`.
+
 The form is a front-end demo. A successful submission is shown in the browser;
 the employee details are not sent to a server or saved to a database.
